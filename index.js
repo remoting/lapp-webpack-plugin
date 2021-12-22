@@ -44,10 +44,11 @@ async function zip(directory){
     await archive.finalize();
 }
 LappWebpackPlugin.prototype.apply = function(compiler) {
-    compiler.hooks.afterEmit.tap(PLUGIN_NAME, async (compilation) => { 
-        await zip(compiler.outputPath)
+    compiler.hooks.afterEmit.tap(PLUGIN_NAME, async (compilation) => {
+        if(compiler.options.mode == "production"){
+            await zip(compiler.outputPath)
+        }
     });
-    
 };
 
 module.exports = LappWebpackPlugin;
