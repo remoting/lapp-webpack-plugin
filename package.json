@@ -1,0 +1,11 @@
+{
+    "description": "lapp-webpack-plugin",
+    "license": "MIT",
+    "main": "index.js",
+    "name": "lapp-webpack-plugin",
+    "version": "1.0.0",
+    "homepage": "https://github.com/remoting/lapp-webpack-plugin",
+    "dependencies": {
+        "archiver": "^5.3.0"
+    }
+}
